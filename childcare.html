@@ -1,0 +1,42 @@
+<html>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="C:\Users\student\Desktop\Capstone"></script>
+	<script src="C:\Users\student\Desktop\scripts\EventListing.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen and (min-width:500px)" href="childcareCSSmain.css">
+<head>
+	<script>
+		$(document).ready(function(){
+		loadPage();
+		});
+		function loadPage(html){
+		if(html==undefined){
+		$("#wrapper").load("index.html #content",hijax);}
+		else{
+		$("#wrapper").load(html + "#content",hijax);}}
+		
+		function hijax(){
+		$("a").click(function(e){
+		e.preventDefault();
+		loadPage(e.target.href);});}
+		</script>
+</head>
+<body>
+	<h1 id="title">Happy Endings Childcare</h1>
+	<div id="wrapper">
+	<img src="C:\Users\student\Desktop\capstone\childcare.jpg" id="logo"width="200px" height="175" />
+
+<FORM id="login" style="margin-center;" action="file:///android_asset/www/Browse.html" method="post">
+    <P>
+    <LABEL for="firstname">Username </LABEL>
+              <INPUT type="text" placeholder="Username....." id="Username"><BR>
+    <LABEL for="lastname">Password </LABEL>
+              <INPUT type="password" style="margin-left:4px; type="text" placeholder="Password....." id="Password"><BR>
+        <INPUT type="submit" value="Login" onclick="loadPage('mainscreen.html')"> <INPUT type="reset"> <INPUT type="submit" value="Sign Up">
+    </P>
+ </FORM>
+</div>
+<div id="links">
+<span><a href="http://www.google.com/"</span>
+</div>
+</body>
+</html>
